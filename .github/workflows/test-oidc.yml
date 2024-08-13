@@ -1,0 +1,9 @@
+name: Testing OIDC
+on: [push]
+permissions:
+  id-token: write
+jobs:
+  OIDC-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "echo $ACTIONS_ID_TOKEN_REQUEST_TOKEN"
